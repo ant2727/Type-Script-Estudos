@@ -10,4 +10,10 @@ export class UserTable{
   getUsers(){
     return this.table
   }
+
+  getUserByEmail(email: string): User | undefined {
+    return this.table.find(user => user.email === email);
+  }
+
+
 }
